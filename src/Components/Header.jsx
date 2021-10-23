@@ -6,15 +6,19 @@ import styled from "styled-components";
 const Header = styled.header`
   width: 100%;
   position: fixed;
+  top: 0;
+  bottom: unset;
   padding: 8px;
   display: flex;
   justify-content: center;
   background: #141c2f;
   color: white;
   z-index: 100;
-
   @media screen and (max-width: 600px) {
+    top: unset;
     bottom: 0;
+    overflow: hidden;
+    height: fit-content;
   }
 
   a {
@@ -30,6 +34,12 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+
+  @media screen and (max-width: 350px) {
+    .menu {
+      overflow: scroll hidden;
+    }
+  }
 
   .logo {
     display: flex;

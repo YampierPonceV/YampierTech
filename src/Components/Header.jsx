@@ -15,9 +15,35 @@ const Header = styled.header`
   color: white;
   z-index: 100;
 
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    overflow: hidden;
+    padding: 0;
+    left: 0;
+    width: 100%;
+
+    .container-logo {
+      img {
+        display: none;
+      }
+    }
+    .name-logo {
+      display: none;
+    }
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  }
+
   .container-header {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     .container-logo {
       display: flex;
@@ -42,7 +68,7 @@ const header = () => {
         <div className="container-header">
           <div className="container-logo">
             <img src={logo} alt="YampierTECH" width="50" />
-            <p>YampierTech</p>
+            <p className="name-logo">YampierTech</p>
           </div>
           <div className="menu">
             <Menu></Menu>

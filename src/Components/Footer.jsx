@@ -7,6 +7,11 @@ const FooterStyle = styled.footer`
   background-color: #09090e;
   color: white;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 13rem;
+  }
+  
+  }
 `;
 
 const Footer = () => {

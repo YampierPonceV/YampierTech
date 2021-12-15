@@ -4,6 +4,40 @@ import ProductoCard from "./ProductoCard";
 
 const ProductoStyle = styled.div`
   padding: 2rem 0;
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 150px;
+    
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    width: max-content;
+    background: #265ed6;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 15;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+  
+  }
   .container-cards {
     display: grid;
     margin-top: 2rem;
@@ -44,6 +78,7 @@ const Producto = () => {
           }
         )}
       </div>
+      <a href="/productos">VER CATALOGO</a>
     </ProductoStyle>
   );
 };

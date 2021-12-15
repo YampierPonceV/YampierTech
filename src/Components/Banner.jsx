@@ -12,7 +12,23 @@ const BannerStyle = styled.div`
   place-items: center;
   overflow: hidden;
   color: #ddd6d6;
-  padding: 0 55px;
+  /* padding: 0 55px; */
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+
+    figure {
+      order: 1;
+    }
+
+    .detaills {
+      order: 2;
+      align-items: center;
+    }
+  }
 
   figure {
     margin: 0;

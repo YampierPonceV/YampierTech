@@ -6,10 +6,14 @@ import Preview from "../Icons/previus";
 import Next from "../Icons/next";
 
 const Hero = styled.div`
-  height: 550px;
+  height: 600px;
   /* border: 1px solid red; */
   position: relative;
   /* padding: 0 55px; */
+
+  @media screen and (max-width: 768px) {
+    height: 700px;
+  }
 `;
 
 const ContainerHero = styled.div`
@@ -45,7 +49,6 @@ const ContainerHero = styled.div`
 `;
 
 const hero = () => {
-  function handlePreview(e) {}
   return (
     <ContainerHero>
       <Wrapper>
@@ -61,12 +64,12 @@ const hero = () => {
               ></Banner>
             );
           })}
-          <button className="previw" onClick={handlePreview}>
+          {/* <button className="previw" onClick={handlePreview}>
             <Preview />
           </button>
           <button className="next">
             <Next />
-          </button>
+          </button> */}
         </Hero>
       </Wrapper>
     </ContainerHero>

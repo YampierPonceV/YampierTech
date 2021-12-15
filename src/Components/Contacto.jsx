@@ -9,8 +9,18 @@ const ContactoStyle = styled.div`
   margin-right: auto;
   padding: 2rem 0;
 
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+  
+  }
+
   .title {
-    border-bottom: 1px solid #000;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid #000000;
+  }
+  .info-contacto {
+    color: #6d6c6c;
   }
   form {
     display: flex;
@@ -45,8 +55,9 @@ const ContactoStyle = styled.div`
     button {
       padding: 0.5rem 1rem;
       font-size: 1.2rem;
-      background: #000;
+      background: #1f57c0;
       border: none;
+      color: #fff;
     }
 
     input,
@@ -61,7 +72,7 @@ const Contacto = () => {
   return (
     <ContactoStyle>
       <h1 className="title">Contacto</h1>
-      <p>
+      <p className="info-contacto">
         Deseas adquirir algun producto o contratar algun servicio dejame un
         mensaje y me contactare contigo
       </p>

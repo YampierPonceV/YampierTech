@@ -1,23 +1,25 @@
-import Contacto from "./Components/Contacto";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Hero from "./Components/Hero";
-import Producto from "./Components/Producto";
-import ServicioInicio from "./Components/ServicioInicio";
-import Wrapper from "./Components/Wrapper";
+import Contact from "./pages/contacto";
+import Home from "./pages/home";
+import Nosotros from "./pages/nosotros";
+import Producto from "./pages/producto";
+import Servicio from "./pages/servicio";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Wrapper>
-        <Producto />
-      </Wrapper>
-      <ServicioInicio />
-      <Wrapper>
-        <Contacto />
-      </Wrapper>
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="producto" element={<Producto />} />
+          <Route path="servicio" element={<Servicio />} />
+          <Route path="nosotros" element={<Nosotros />} />
+          <Route path="contacto" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

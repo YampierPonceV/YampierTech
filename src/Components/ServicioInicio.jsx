@@ -9,12 +9,21 @@ const ServicioInicioStyle = styled.div`
   width: 100%;
   background-color: #301777;
   color: #d6d0d0;
-
   .container-servicios {
     position: relative;
     height: 550px;
     overflow: hidden;
   }
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+    .container-servicios {
+      height: 600px;
+    }
+  }
+  
+  }
+
+ 
 `;
 
 const ServicioInicio = () => {

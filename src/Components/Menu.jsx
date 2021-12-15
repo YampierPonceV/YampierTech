@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import home from "../assets/icon-menu/home.svg";
 import product from "../assets/icon-menu/product.svg";
@@ -35,34 +36,34 @@ const menu = () => {
   return (
     <Listas>
       <li>
-        <a href="#index">
+        <Link to="/">
           <img src={home} alt="icono inicio" />
           <span>Inicio</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#index">
+        <Link to="/producto">
           <img src={product} alt="icono productos" />
           <span>Productos</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#index">
+        <Link to={"/servicio"}>
           <img src={services} alt="icono servicios" />
           <span>Servicios</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#index">
+        <Link to={"/nosotros"}>
           <img src={about} alt="icono nostros" />
           <span>Nosotros</span>
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="#index">
+        <Link to={"/contacto"}>
           <img src={contact} alt="icono contacto" />
           <span>Contacto</span>
-        </a>
+        </Link>
       </li>
     </Listas>
   );

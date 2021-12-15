@@ -8,6 +8,35 @@ const ServicioCardStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
+  overflow: hidden;
+
+  figure {
+    margin: 0;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    figure {
+      order: 1;
+    }
+
+    .container-detaills {
+      text-align: center;
+      order: 2;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+  
+  }
 
   button {
     background: #2b89c7;

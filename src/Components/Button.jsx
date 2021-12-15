@@ -7,6 +7,13 @@ const ButonStyle = styled.a`
   padding: 10px;
   border-radius: 5px;
   width: max-content;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
+  
+  }
 `;
 
 const Button = ({ texto, link }) => {
